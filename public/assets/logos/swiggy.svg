@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Swiggy">
+  <rect width="120" height="120" rx="16" fill="#ffffff"/>
+  <rect x="8" y="8" width="104" height="104" rx="12" fill="#FC8019"/>
+  <text x="60" y="68" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">SWIGGY</text>
+  <path d="M60 28c-6 0-10 4-10 9 0 5 10 14 10 14s10-9 10-14c0-5-4-9-10-9z" fill="white"/>
+  <circle cx="60" cy="37" r="4" fill="#FC8019"/>
+</svg>

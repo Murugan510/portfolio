@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#020617"/>
+  <rect x="420" y="32" width="360" height="610" rx="40" fill="#0f172a" stroke="#1e293b" stroke-width="3"/>
+  <rect x="438" y="72" width="324" height="500" rx="20" fill="#111827"/>
+  <rect x="438" y="72" width="324" height="500" fill="url(#fade)"/>
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#0f172a" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="600" cy="300" r="48" fill="white" opacity="0.92"/>
+  <polygon points="585,275 585,325 625,300" fill="#0f172a"/>
+  <rect x="470" y="420" width="260" height="14" rx="5" fill="#334155"/>
+  <rect x="470" y="448" width="200" height="10" rx="4" fill="#1e293b"/>
+  <rect x="438" y="72" width="324" height="166" fill="#172554" opacity="0.35"/>
+  <rect x="438" y="406" width="324" height="166" fill="#020617" opacity="0.55"/>
+  <rect x="520" y="592" width="160" height="6" rx="3" fill="#334155"/>
+  <text x="600" y="640" text-anchor="middle" fill="#64748b" font-family="Inter, sans-serif" font-size="22" font-weight="600" letter-spacing="0.04em">REELS PLAYER — REACT NATIVE</text>
+</svg>

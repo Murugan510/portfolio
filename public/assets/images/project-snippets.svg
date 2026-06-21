@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#f1f5f9"/>
+  <rect x="80" y="48" width="1040" height="579" rx="28" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="80" y="48" width="1040" height="64" rx="28" fill="#f8fafc"/>
+  <rect x="80" y="96" width="1040" height="16" fill="#ffffff"/>
+  <rect x="120" y="72" width="180" height="16" rx="6" fill="#2563eb" opacity="0.15"/>
+  <rect x="320" y="72" width="80" height="16" rx="6" fill="#e2e8f0"/>
+  <rect x="420" y="72" width="80" height="16" rx="6" fill="#e2e8f0"/>
+  <rect x="120" y="140" width="720" height="360" rx="20" fill="#0f172a"/>
+  <circle cx="480" cy="320" r="52" fill="white" opacity="0.95"/>
+  <polygon points="465,295 465,345 505,320" fill="#0f172a"/>
+  <rect x="120" y="520" width="480" height="20" rx="6" fill="#0f172a" opacity="0.85"/>
+  <rect x="120" y="552" width="360" height="14" rx="5" fill="#cbd5e1"/>
+  <rect x="120" y="576" width="280" height="14" rx="5" fill="#e2e8f0"/>
+  <rect x="880" y="140" width="200" height="120" rx="16" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="904" y="168" width="152" height="12" rx="4" fill="#2563eb" opacity="0.5"/>
+  <rect x="904" y="192" width="120" height="10" rx="4" fill="#93c5fd"/>
+  <rect x="880" y="280" width="200" height="120" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="904" y="308" width="100" height="28" rx="6" fill="#22c55e" opacity="0.3"/>
+  <text x="600" y="640" text-anchor="middle" fill="#64748b" font-family="Inter, sans-serif" font-size="22" font-weight="600" letter-spacing="0.04em">SNIPPETS — NEXT.JS PLATFORM</text>
+</svg>
