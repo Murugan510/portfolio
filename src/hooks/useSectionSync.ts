@@ -5,10 +5,10 @@ import { getEditorScrollContainer } from "../utils/editorScroll";
 
 /** Sync active file tab with scroll position */
 export function useSectionSync() {
-  const { setActiveFile, viewMode, secretUnlocked, bootComplete } = useViewMode();
+  const { setActiveFile, secretUnlocked, bootComplete } = useViewMode();
 
   useEffect(() => {
-    if (viewMode !== "vscode" || !bootComplete) return;
+    if (!bootComplete) return;
 
     const root = getEditorScrollContainer();
     if (!root) return;
@@ -36,5 +36,5 @@ export function useSectionSync() {
 
     sections.forEach(({ el }) => observer.observe(el));
     return () => observer.disconnect();
-  }, [viewMode, setActiveFile, secretUnlocked, bootComplete]);
+  }, [setActiveFile, secretUnlocked, bootComplete]);
 }

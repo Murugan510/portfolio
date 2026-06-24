@@ -15,13 +15,20 @@ export function Projects() {
         <div className="project-grid project-grid--featured">
           {PROJECTS.map((project) => (
             <Reveal key={project.name}>
-              <article className="project-card project-card--featured">
+              <article className="project-card project-card--featured glass">
                 <div className="project-image-wrap">
                   <img src={project.image} alt={project.alt} width={1200} height={675} loading="lazy" />
                   <div className="project-overlay" aria-hidden="true"></div>
                 </div>
                 <div className="project-body">
                   <h3>{project.name}</h3>
+
+                  <div className="project-metrics" aria-label="Key metrics">
+                    {project.metrics.map((m) => (
+                      <span key={m} className="project-metric-chip">{m}</span>
+                    ))}
+                  </div>
+
                   <div className="project-meta">
                     <div className="project-block">
                       <span className="project-block-label">Problem</span>
@@ -31,13 +38,24 @@ export function Projects() {
                       <span className="project-block-label">Solution</span>
                       <p>{project.solution}</p>
                     </div>
+                    <div className="project-block">
+                      <span className="project-block-label">Architecture</span>
+                      <p>{project.architecture}</p>
+                    </div>
+                    <div className="project-block">
+                      <span className="project-block-label">Challenges</span>
+                      <p>{project.challenges}</p>
+                    </div>
                     <div className="project-block project-block--impact">
                       <span className="project-block-label">Impact</span>
-                      <p>
-                        <RichText text={project.impact} />
-                      </p>
+                      <p><RichText text={project.impact} /></p>
+                    </div>
+                    <div className="project-block project-block--lesson">
+                      <span className="project-block-label">Lessons Learned</span>
+                      <p>{project.lessons}</p>
                     </div>
                   </div>
+
                   <div className="skill-badges project-tech">
                     {project.tech.map((t) => (
                       <span key={t.label} className="skill-badge">
@@ -45,23 +63,12 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
+
                   <div className="project-actions">
-                    <a
-                      className="btn btn-outline btn-sm"
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.name} GitHub repository`}
-                    >
+                    <a className="btn btn-outline btn-sm" href={project.github} target="_blank" rel="noopener noreferrer">
                       <i className="fa-brands fa-github" aria-hidden="true"></i> GitHub
                     </a>
-                    <a
-                      className="btn btn-gradient btn-sm"
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.name} live demo`}
-                    >
+                    <a className="btn btn-gradient btn-sm" href={project.demo} target="_blank" rel="noopener noreferrer">
                       <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
                     </a>
                   </div>

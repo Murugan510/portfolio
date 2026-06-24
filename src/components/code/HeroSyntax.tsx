@@ -1,4 +1,4 @@
-import { useViewMode } from "../../context/ViewModeContext";
+import { SITE } from "../../data/portfolio";
 
 interface TokenProps {
   type: string;
@@ -10,9 +10,6 @@ function T({ type, children }: TokenProps) {
 }
 
 export function HeroSyntax() {
-  const { viewMode } = useViewMode();
-  if (viewMode !== "vscode") return null;
-
   return (
     <div className="syntax-block" aria-hidden="true">
       <pre className="syntax-pre">
@@ -21,13 +18,13 @@ export function HeroSyntax() {
           {"\n"}
           <T type="keyword">export const</T> <T type="name">engineer</T> = {"{"}
           {"\n  "}
-          <T type="prop">name</T>: <T type="string">"Murugan Ramakrishnan"</T>,
+          <T type="prop">name</T>: <T type="string">"{SITE.name}"</T>,
           {"\n  "}
-          <T type="prop">role</T>: <T type="string">"Senior Frontend Engineer"</T>,
+          <T type="prop">role</T>: <T type="string">"{SITE.title}"</T>,
           {"\n  "}
-          <T type="prop">location</T>: <T type="string">"Bangalore, India"</T>,
+          <T type="prop">location</T>: <T type="string">"{SITE.location}"</T>,
           {"\n  "}
-          <T type="prop">experience</T>: <T type="string">"3.5+ years"</T>,
+          <T type="prop">experience</T>: <T type="string">"{SITE.experience.toLowerCase()}"</T>,
           {"\n  "}
           <T type="prop">stack</T>: [<T type="string">"React Native"</T>, <T type="string">"React"</T>, <T type="string">"Next.js"</T>, <T type="string">"TypeScript"</T>],
           {"\n  "}
@@ -43,9 +40,6 @@ export function HeroSyntax() {
 }
 
 export function AboutSyntax() {
-  const { viewMode } = useViewMode();
-  if (viewMode !== "vscode") return null;
-
   return (
     <div className="syntax-block" aria-hidden="true">
       <pre className="syntax-pre">

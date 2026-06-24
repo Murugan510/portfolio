@@ -25,9 +25,7 @@ function StatCard({
         <div className="stat-icon">
           <i className={`fa-solid ${icon}`} aria-hidden="true"></i>
         </div>
-        <p className="stat-value" ref={ref}>
-          {display}
-        </p>
+        <p className="stat-value" ref={ref}>{display}</p>
         <p className="stat-label">{label}</p>
       </article>
     </Reveal>

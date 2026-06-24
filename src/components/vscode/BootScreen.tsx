@@ -3,12 +3,12 @@ import { BOOT_LINES } from "../../data/vscode";
 import { useViewMode } from "../../context/ViewModeContext";
 
 export function BootScreen() {
-  const { bootComplete, completeBoot, viewMode } = useViewMode();
+  const { bootComplete, completeBoot } = useViewMode();
   const [visibleLines, setVisibleLines] = useState<string[]>([]);
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    if (bootComplete || viewMode !== "vscode") return;
+    if (bootComplete) return;
 
     const timers = BOOT_LINES.map((line) =>
       setTimeout(() => {
@@ -25,9 +25,9 @@ export function BootScreen() {
       timers.forEach(clearTimeout);
       clearTimeout(finishTimer);
     };
-  }, [bootComplete, completeBoot, viewMode]);
+  }, [bootComplete, completeBoot]);
 
-  if (bootComplete || viewMode !== "vscode") return null;
+  if (bootComplete) return null;
 
   return (
     <div className={`boot-screen${done ? " boot-screen--exit" : ""}`} aria-live="polite">
@@ -40,9 +40,7 @@ export function BootScreen() {
             <p key={i} className="boot-line">
               {line}
               {i === visibleLines.length - 1 && !done && (
-                <span className="boot-cursor" aria-hidden="true">
-                  ▋
-                </span>
+                <span className="boot-cursor" aria-hidden="true">▋</span>
               )}
             </p>
           ))}

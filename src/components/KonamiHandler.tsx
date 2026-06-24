@@ -8,7 +8,7 @@ import { scrollEditorToSection } from "../utils/editorScroll";
 
 /** Listens for Konami code and unlocks secret section */
 export function KonamiHandler() {
-  const { unlockSecret, secretUnlocked, setActiveFile, viewMode, setSidebarPanel } = useViewMode();
+  const { unlockSecret, secretUnlocked, setActiveFile, setSidebarPanel } = useViewMode();
   const { play } = useSound();
   const { showToast } = useToast();
   const { completeQuest } = useActivity();
@@ -23,18 +23,10 @@ export function KonamiHandler() {
     setTimeout(() => {
       if (scrollEditorToSection("secret")) {
         setActiveFile("secret");
-        if (viewMode === "vscode") setSidebarPanel("explorer");
-        return;
-      }
-
-      const el = document.getElementById("secret");
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        setActiveFile("secret");
-        if (viewMode === "vscode") setSidebarPanel("explorer");
+        setSidebarPanel("explorer");
       }
     }, 400);
-  }, [secretUnlocked, unlockSecret, completeQuest, play, showToast, setActiveFile, viewMode, setSidebarPanel]);
+  }, [secretUnlocked, unlockSecret, completeQuest, play, showToast, setActiveFile, setSidebarPanel]);
 
   useKonamiCode(onUnlock);
   return null;

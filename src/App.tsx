@@ -1,4 +1,3 @@
-import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Stats } from "./components/Stats";
 import { About } from "./components/About";
@@ -8,7 +7,6 @@ import { Projects } from "./components/Projects";
 import { Achievements } from "./components/Achievements";
 import { Contact } from "./components/Contact";
 import { Secret } from "./components/Secret";
-import { Footer } from "./components/Footer";
 import { DevTerminal } from "./components/DevTerminal";
 import { QuestWidget } from "./components/QuestWidget";
 import { BootScreen } from "./components/vscode/BootScreen";
@@ -36,10 +34,10 @@ function PortfolioContent() {
 }
 
 export default function App() {
-  const { viewMode, bootComplete, setViewMode } = useViewMode();
+  const { bootComplete } = useViewMode();
   useSectionSync();
 
-  if (viewMode === "vscode" && !bootComplete) {
+  if (!bootComplete) {
     return <BootScreen />;
   }
 
@@ -51,28 +49,9 @@ export default function App() {
 
       <KonamiHandler />
 
-      {viewMode === "vscode" ? (
-        <VSCodeShell>
-          <PortfolioContent />
-        </VSCodeShell>
-      ) : (
-        <>
-          <Header />
-          <main id="main-content">
-            <PortfolioContent />
-          </main>
-          <Footer />
-          <button
-            type="button"
-            className="view-switch-fab"
-            onClick={() => setViewMode("vscode")}
-            aria-label="Switch to VS Code view"
-          >
-            <i className="fa-solid fa-code" aria-hidden="true"></i>
-            <span className="view-switch-fab-label">VS Code View</span>
-          </button>
-        </>
-      )}
+      <VSCodeShell>
+        <PortfolioContent />
+      </VSCodeShell>
 
       <DevTerminal />
       <QuestWidget />

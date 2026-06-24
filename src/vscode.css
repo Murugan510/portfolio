@@ -184,7 +184,7 @@
   display: none;
 }
 
-.vscode-classic-btn {
+.vscode-sound-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,7 +198,7 @@
   font-size: 0.75rem;
 }
 
-.vscode-classic-btn:hover {
+.vscode-sound-btn:hover {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
 }
@@ -556,36 +556,168 @@
   background: #2d2d2d;
 }
 
-/* Classic view switch FAB */
-.view-switch-fab {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  z-index: 300;
-  display: inline-flex;
+/* Content enhancements inside editor */
+[data-view="vscode"] .about-principles {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  [data-view="vscode"] .about-principles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+[data-view="vscode"] .principle-card {
+  padding: 1.25rem;
+}
+
+[data-view="vscode"] .principle-card h4 {
+  display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.65rem 1.1rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.9375rem;
+}
+
+[data-view="vscode"] .principle-card h4 i {
+  color: #3794ff;
+}
+
+[data-view="vscode"] .principle-card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+[data-view="vscode"] .about-milestones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #3c3c3c;
+}
+
+[data-view="vscode"] .milestone-year {
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3794ff;
+  background: rgba(55, 148, 255, 0.12);
+  border-radius: 999px;
+}
+
+[data-view="vscode"] .milestone-label {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+[data-view="vscode"] .timeline-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+[data-view="vscode"] .timeline-badge {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #3794ff;
+  background: rgba(55, 148, 255, 0.1);
+  border: 1px solid rgba(55, 148, 255, 0.2);
+  border-radius: 999px;
+}
+
+[data-view="vscode"] .timeline-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid #3c3c3c;
+}
+
+[data-view="vscode"] .timeline-metric {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+[data-view="vscode"] .timeline-metric i {
+  color: #3794ff;
+  margin-right: 0.35rem;
+}
+
+[data-view="vscode"] .timeline-expand {
+  margin-top: 0.75rem;
+  padding: 0;
+  border: none;
+  background: none;
   font-family: inherit;
   font-size: 0.8125rem;
   font-weight: 600;
+  color: #3794ff;
+  cursor: pointer;
+}
+
+[data-view="vscode"] .timeline-highlights--collapsed li:nth-child(n+4) {
+  display: none;
+}
+
+[data-view="vscode"] .skill-badge-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  white-space: nowrap;
   color: #fff;
   background: #333;
-  border: 1px solid #555;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+[data-view="vscode"] .skill-badge {
+  position: relative;
+}
+
+[data-view="vscode"] .skill-badge:hover .skill-badge-tooltip,
+[data-view="vscode"] .skill-badge:focus-visible .skill-badge-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-view="vscode"] .project-metric-chip {
+  padding: 0.25rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #3794ff;
+  background: rgba(55, 148, 255, 0.1);
+  border-radius: 999px;
+}
+
+[data-view="vscode"] .project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+[data-view="vscode"] .project-block--lesson {
+  padding: 1rem;
+  background: rgba(55, 148, 255, 0.06);
+  border: 1px dashed rgba(55, 148, 255, 0.25);
   border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  transition: transform 0.15s, background 0.15s;
-}
-
-.view-switch-fab:hover {
-  background: #007acc;
-  border-color: #007acc;
-  transform: translateY(-2px);
-}
-
-.view-switch-fab-label {
-  white-space: nowrap;
 }
 
 /* Desktop */
@@ -730,20 +862,6 @@
   .copilot-chip {
     font-size: 0.625rem;
     padding: 0.28rem 0.5rem;
-  }
-
-  .view-switch-fab-label {
-    display: none;
-  }
-
-  .view-switch-fab {
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    justify-content: center;
-    border-radius: 50%;
-    bottom: max(1rem, env(safe-area-inset-bottom, 0));
-    left: max(1rem, env(safe-area-inset-left, 0));
   }
 }
 

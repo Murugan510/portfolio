@@ -16,7 +16,6 @@ export function VSCodeShell({ children }: VSCodeShellProps) {
     setActiveFile,
     sidebarOpen,
     setSidebarOpen,
-    setViewMode,
     sidebarPanel,
     setSidebarPanel,
     secretUnlocked,
@@ -86,17 +85,6 @@ export function VSCodeShell({ children }: VSCodeShellProps) {
           title={muted ? "Unmute" : "Mute"}
         >
           <i className={`fa-solid ${muted ? "fa-volume-xmark" : "fa-volume-high"}`} aria-hidden="true"></i>
-        </button>
-        <button
-          type="button"
-          className="vscode-classic-btn"
-          onClick={() => {
-            play("click");
-            setViewMode("classic");
-          }}
-          title="Switch to classic view"
-        >
-          <i className="fa-solid fa-window-maximize" aria-hidden="true"></i>
         </button>
       </header>
 

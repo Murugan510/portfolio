@@ -2,21 +2,18 @@ import { SITE } from "../data/portfolio";
 import { Reveal } from "./Reveal";
 import { useTyping } from "../hooks/useTyping";
 import { useActivity } from "../context/ActivityContext";
-import { useViewMode } from "../context/ViewModeContext";
 import { HeroSyntax } from "./code/HeroSyntax";
 
 export function Hero() {
   const typingText = useTyping();
   const { toggleTerminal } = useActivity();
-  const { viewMode } = useViewMode();
-  const showImmediately = viewMode === "vscode";
 
   return (
     <section id="hero" className="hero section" aria-labelledby="hero-heading">
       <HeroSyntax />
       <div className="container">
         <div className="hero-grid">
-          <Reveal className="hero-content" immediate={showImmediately}>
+          <Reveal className="hero-content" immediate>
             <p className="eyebrow">
               <i className="fa-solid fa-location-dot" aria-hidden="true"></i>
               {SITE.location} · {SITE.experience}
@@ -48,25 +45,25 @@ export function Hero() {
               </a>
             </div>
 
-              <div className="hero-social" aria-label="Social links">
-                <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-                </a>
-                <a href={SITE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <i className="fa-brands fa-github" aria-hidden="true"></i>
-                </a>
-                <a href={`mailto:${SITE.email}`} aria-label="Email">
-                  <i className="fa-solid fa-envelope" aria-hidden="true"></i>
-                </a>
-              </div>
+            <div className="hero-social" aria-label="Social links">
+              <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href={SITE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i className="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href={`mailto:${SITE.email}`} aria-label="Email">
+                <i className="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
 
-              <button type="button" className="terminal-hint" onClick={toggleTerminal}>
-                <i className="fa-solid fa-terminal" aria-hidden="true"></i>
-                Try the dev terminal — press <kbd>`</kbd> or click here
-              </button>
-            </Reveal>
+            <button type="button" className="terminal-hint" onClick={toggleTerminal}>
+              <i className="fa-solid fa-terminal" aria-hidden="true"></i>
+              Try the dev terminal — press <kbd>`</kbd> or click here
+            </button>
+          </Reveal>
 
-          <Reveal className="hero-visual" delay={1} immediate={showImmediately}>
+          <Reveal className="hero-visual" delay={1} immediate>
             <div className="profile-card glass float">
               <div className="profile-ring" aria-hidden="true"></div>
               <div className="profile-glow" aria-hidden="true"></div>
@@ -77,6 +74,7 @@ export function Hero() {
                   alt={`${SITE.name} — ${SITE.title}`}
                   width={280}
                   height={280}
+                  loading="eager"
                 />
               </div>
               <div className="profile-stats-mini">

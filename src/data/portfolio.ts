@@ -39,12 +39,43 @@ export const ABOUT_HIGHLIGHTS = [
   "Open to product company roles",
 ] as const;
 
+export const ENGINEERING_PRINCIPLES = [
+  {
+    icon: "fa-gauge-high",
+    title: "Performance first",
+    description: "Profile, measure, and optimize before shipping — especially on mobile and low-connectivity surfaces.",
+  },
+  {
+    icon: "fa-cubes",
+    title: "Reusable systems",
+    description: "Build component APIs and patterns that scale across teams, not one-off screens.",
+  },
+  {
+    icon: "fa-chart-line",
+    title: "Data-informed shipping",
+    description: "Instrument with analytics, validate with metrics, iterate with evidence.",
+  },
+  {
+    icon: "fa-mobile-screen",
+    title: "Real-world UX",
+    description: "Design for offline, mid-range devices, and users who depend on the product daily.",
+  },
+] as const;
+
+export const CAREER_MILESTONES = [
+  { year: "2022", label: "Joined Ninjacart — Frontend engineering at scale" },
+  { year: "Ops", label: "Operations leadership at Masalabox & Swiggy" },
+  { year: "Now", label: "Shipping React Native products for 100K+ DAU" },
+] as const;
+
 export const EXPERIENCE = [
   {
     role: "Senior Frontend Developer",
     company: "Ninjacart",
     logo: "/assets/logos/ninjacart.svg",
     date: "2022 — Present",
+    badges: ["React Native", "100K+ DAU", "Payments"],
+    metrics: ["100K+ daily users", "3+ teams on shared UI"],
     highlights: [
       "Built production React Native applications serving **100K+ daily active users**",
       "Developed a reusable component library adopted across **3+ product teams**",
@@ -60,6 +91,8 @@ export const EXPERIENCE = [
     company: "Masalabox",
     logo: "/assets/logos/masalabox.svg",
     date: "Previous",
+    badges: ["Logistics", "Last-mile"],
+    metrics: ["200+ delivery partners"],
     highlights: [
       "Scaled delivery operations across multiple zones with measurable SLA improvements",
       "Led and managed **200+ delivery partners** across high-volume routes",
@@ -70,6 +103,8 @@ export const EXPERIENCE = [
     company: "Swiggy",
     logo: "/assets/logos/swiggy.svg",
     date: "Previous",
+    badges: ["Promoted internally", "High-growth ops"],
+    metrics: ["Fast-paced delivery ops"],
     highlights: [
       "Started as Delivery Executive — **promoted internally** for operational excellence",
       "Managed high-growth delivery operations in a fast-paced product environment",
@@ -82,6 +117,8 @@ export type SkillBadge = {
   icon?: string;
   logo?: string;
   logoClass?: string;
+  years?: string;
+  proficiency?: "Expert" | "Advanced" | "Proficient";
 };
 
 export const SKILL_CATEGORIES: {
@@ -94,62 +131,62 @@ export const SKILL_CATEGORIES: {
     title: "Languages",
     icon: "fa-code",
     skills: [
-      { icon: "fa-brands fa-js", label: "JavaScript" },
-      { logo: "/assets/logos/tech/typescript.svg", label: "TypeScript" },
+      { icon: "fa-brands fa-js", label: "JavaScript", years: "4+ yrs", proficiency: "Advanced" },
+      { logo: "/assets/logos/tech/typescript.svg", label: "TypeScript", years: "3+ yrs", proficiency: "Advanced" },
     ],
   },
   {
     title: "Frontend",
     icon: "fa-window-maximize",
     skills: [
-      { logo: "/assets/logos/tech/react.svg", label: "React" },
-      { logo: "/assets/logos/tech/react.svg", label: "React Native" },
-      { logo: "/assets/logos/tech/nextjs.svg", label: "Next.js", logoClass: "skill-badge-logo--nextjs" },
-      { logo: "/assets/logos/tech/expo.svg", label: "Expo", logoClass: "skill-badge-logo--expo" },
+      { logo: "/assets/logos/tech/react.svg", label: "React", years: "4+ yrs", proficiency: "Expert" },
+      { logo: "/assets/logos/tech/react.svg", label: "React Native", years: "3+ yrs", proficiency: "Expert" },
+      { logo: "/assets/logos/tech/nextjs.svg", label: "Next.js", logoClass: "skill-badge-logo--nextjs", years: "2+ yrs", proficiency: "Advanced" },
+      { logo: "/assets/logos/tech/expo.svg", label: "Expo", logoClass: "skill-badge-logo--expo", years: "3+ yrs", proficiency: "Advanced" },
     ],
   },
   {
     title: "State Management",
     icon: "fa-database",
     skills: [
-      { icon: "fa-solid fa-layer-group", label: "Zustand" },
-      { icon: "fa-solid fa-arrows-rotate", label: "React Query" },
-      { icon: "fa-solid fa-database", label: "MMKV" },
+      { icon: "fa-solid fa-layer-group", label: "Zustand", years: "2+ yrs", proficiency: "Advanced" },
+      { icon: "fa-solid fa-arrows-rotate", label: "React Query", years: "2+ yrs", proficiency: "Advanced" },
+      { icon: "fa-solid fa-database", label: "MMKV", years: "2+ yrs", proficiency: "Proficient" },
     ],
   },
   {
     title: "UI",
     icon: "fa-palette",
     skills: [
-      { icon: "fa-solid fa-wind", label: "Tailwind" },
-      { icon: "fa-solid fa-paintbrush", label: "Tamagui" },
-      { icon: "fa-solid fa-cubes", label: "Material UI" },
+      { icon: "fa-solid fa-wind", label: "Tailwind", years: "3+ yrs", proficiency: "Advanced" },
+      { icon: "fa-solid fa-paintbrush", label: "Tamagui", years: "1+ yrs", proficiency: "Proficient" },
+      { icon: "fa-solid fa-cubes", label: "Material UI", years: "2+ yrs", proficiency: "Proficient" },
     ],
   },
   {
     title: "Backend",
     icon: "fa-server",
     skills: [
-      { icon: "fa-brands fa-node-js", label: "Node.js" },
-      { icon: "fa-solid fa-server", label: "Express" },
+      { icon: "fa-brands fa-node-js", label: "Node.js", years: "2+ yrs", proficiency: "Proficient" },
+      { icon: "fa-solid fa-server", label: "Express", years: "2+ yrs", proficiency: "Proficient" },
     ],
   },
   {
     title: "Database",
     icon: "fa-cloud",
-    skills: [{ logo: "/assets/logos/tech/firebase.svg", label: "Firebase" }],
+    skills: [{ logo: "/assets/logos/tech/firebase.svg", label: "Firebase", years: "2+ yrs", proficiency: "Proficient" }],
   },
   {
     title: "Tools",
     icon: "fa-wrench",
     wide: true,
     skills: [
-      { icon: "fa-brands fa-git-alt", label: "Git" },
-      { icon: "fa-solid fa-diagram-project", label: "TurboRepo" },
-      { icon: "fa-solid fa-box", label: "PNPM" },
-      { logo: "/assets/logos/tech/posthog.svg", label: "PostHog" },
-      { logo: "/assets/logos/tech/datadog.svg", label: "Datadog" },
-      { icon: "fa-brands fa-figma", label: "Figma" },
+      { icon: "fa-brands fa-git-alt", label: "Git", years: "4+ yrs", proficiency: "Advanced" },
+      { icon: "fa-solid fa-diagram-project", label: "TurboRepo", years: "1+ yrs", proficiency: "Proficient" },
+      { icon: "fa-solid fa-box", label: "PNPM", years: "2+ yrs", proficiency: "Proficient" },
+      { logo: "/assets/logos/tech/posthog.svg", label: "PostHog", years: "2+ yrs", proficiency: "Advanced" },
+      { logo: "/assets/logos/tech/datadog.svg", label: "Datadog", years: "1+ yrs", proficiency: "Proficient" },
+      { icon: "fa-brands fa-figma", label: "Figma", years: "3+ yrs", proficiency: "Proficient" },
     ],
   },
 ];
@@ -165,6 +202,13 @@ export const PROJECTS = [
       "Built a production React Native app with offline support, Razorpay integration, PostHog analytics, and a performant video feed.",
     impact:
       "Serves **100K+ daily users** with stable payments, analytics-driven iterations, and seamless offline-to-online sync.",
+    architecture:
+      "React Native + Expo monorepo patterns, offline queue layer, shared component library, PostHog event pipeline.",
+    challenges:
+      "Unreliable rural connectivity, payment edge cases, and video performance on mid-range Android devices.",
+    metrics: ["100K+ DAU", "Stable Razorpay flows", "Offline-to-online sync"],
+    lessons:
+      "Offline-first isn't optional for rural users — design sync and payment states explicitly from day one.",
     tech: [
       { icon: "fa-brands fa-react", label: "React Native" },
       { icon: "fa-solid fa-bolt", label: "Expo" },
@@ -183,6 +227,13 @@ export const PROJECTS = [
       "Engineered a Next.js platform with SSR, metadata optimization, and performance budgets for video-heavy pages.",
     impact:
       "Improved discoverability and page performance with measurable gains in LCP and SEO-indexed content surfaces.",
+    architecture:
+      "Next.js App Router, SSR for content pages, metadata API, image optimization, performance budgets per route.",
+    challenges:
+      "Video-heavy pages hurting LCP, SEO metadata at scale, and balancing SSR with interactive video UI.",
+    metrics: ["Improved LCP", "SEO-indexed surfaces", "Faster initial loads"],
+    lessons:
+      "Set performance budgets early — video pages need a deliberate SSR and asset loading strategy.",
     tech: [
       { icon: "fa-solid fa-n", label: "Next.js" },
       { icon: "fa-solid fa-code", label: "TypeScript" },
@@ -201,6 +252,13 @@ export const PROJECTS = [
       "Built a FlashList-powered reels component with optimized video preloading, autoplay logic, and aggressive memory management.",
     impact:
       "Delivered buttery-smooth vertical scrolling and reduced frame drops across production video surfaces.",
+    architecture:
+      "FlashList virtualization, video preloading pool, memory-aware autoplay controller, reusable feed component.",
+    challenges:
+      "Memory spikes on scroll, autoplay reliability, and frame drops on mid-range devices.",
+    metrics: ["Smoother scroll", "Reduced frame drops", "Production video surfaces"],
+    lessons:
+      "Virtualized lists + aggressive memory management are non-negotiable for vertical video feeds.",
     tech: [
       { icon: "fa-brands fa-react", label: "React Native" },
       { icon: "fa-solid fa-list", label: "FlashList" },

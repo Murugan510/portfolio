@@ -17,11 +17,7 @@ export function Achievements() {
             <Reveal key={item.title} delay={i > 0 && i < 4 ? (i as 1 | 2 | 3) : undefined}>
               <article className="achievement-card glass">
                 <div className="achievement-metric">
-                  {item.metric ? (
-                    item.metric
-                  ) : (
-                    <i className={`fa-solid ${item.icon}`} aria-hidden="true"></i>
-                  )}
+                  {item.metric ? item.metric : <i className={`fa-solid ${item.icon}`} aria-hidden="true"></i>}
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
