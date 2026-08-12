@@ -28,7 +28,7 @@ export function HeroSyntax() {
           {"\n  "}
           <T type="prop">stack</T>: [<T type="string">"React Native"</T>, <T type="string">"React"</T>, <T type="string">"Next.js"</T>, <T type="string">"TypeScript"</T>],
           {"\n  "}
-          <T type="prop">impact</T>: <T type="string">"100K+ daily active users"</T>,
+          <T type="prop">impact</T>: <T type="string">"1M+ downloads · 600K MAU"</T>,
           {"\n  "}
           <T type="prop">openToWork</T>: <T type="bool">true</T>,
           {"\n"}
@@ -48,19 +48,19 @@ export function AboutSyntax() {
           {"\n\n"}
           <T type="heading">## Building products that scale</T>
           {"\n\n"}
-          Senior Frontend Engineer with <T type="bold">3.5+ years</T> shipping at product companies.
+          Frontend engineer with <T type="bold">5+ years</T> professional experience.
           {"\n\n"}
-          <T type="keyword">Specializations:</T>
+          <T type="keyword">Focus:</T>
           {"\n"}
-          - <T type="string">Performance optimization</T>
+          - <T type="string">React.js · Next.js · React Native</T>
           {"\n"}
-          - <T type="string">Reusable architecture</T>
+          - <T type="string">Offline-first & SSR/SEO</T>
           {"\n"}
-          - <T type="string">Video streaming</T>
+          - <T type="string">Payments · media · i18n</T>
           {"\n"}
-          - <T type="string">Analytics & SEO</T>
+          - <T type="string">1M+ downloads · 600K MAU</T>
           {"\n"}
-          - <T type="string">100K+ DAU production apps</T>
+          - <T type="string">11 Indian languages</T>
         </code>
       </pre>
     </div>

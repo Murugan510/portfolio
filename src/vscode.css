@@ -654,19 +654,7 @@
 }
 
 [data-view="vscode"] .timeline-expand {
-  margin-top: 0.75rem;
-  padding: 0;
-  border: none;
-  background: none;
-  font-family: inherit;
-  font-size: 0.8125rem;
-  font-weight: 600;
   color: #3794ff;
-  cursor: pointer;
-}
-
-[data-view="vscode"] .timeline-highlights--collapsed li:nth-child(n+4) {
-  display: none;
 }
 
 [data-view="vscode"] .skill-badge-tooltip {
@@ -713,11 +701,25 @@
   margin: 0.75rem 0 1rem;
 }
 
-[data-view="vscode"] .project-block--lesson {
-  padding: 1rem;
+[data-view="vscode"] .project-accordion {
+  background: #1e1e1e;
+  border-color: #3c3c3c;
+}
+
+[data-view="vscode"] .project-accordion-item {
+  border-bottom-color: #3c3c3c;
+}
+
+[data-view="vscode"] .project-accordion-item summary {
+  color: #3794ff;
+}
+
+[data-view="vscode"] .project-accordion-item[open] summary {
   background: rgba(55, 148, 255, 0.06);
-  border: 1px dashed rgba(55, 148, 255, 0.25);
-  border-radius: 8px;
+}
+
+[data-view="vscode"] .project-accordion-body {
+  color: #cccccc;
 }
 
 /* Desktop */

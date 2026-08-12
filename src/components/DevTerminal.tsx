@@ -167,11 +167,18 @@ export function DevTerminal() {
         scrollToSection("#contact");
         break;
 
-      case "resume":
+      case "resume": {
         completeQuest("download-resume");
-        append({ type: "success", text: "Downloading resume.pdf…" });
-        window.open("/assets/resume.pdf", "_blank");
+        append({ type: "success", text: `Downloading ${SITE.resumeFilename}…` });
+        const link = document.createElement("a");
+        link.href = SITE.resumePath;
+        link.download = SITE.resumeFilename;
+        link.rel = "noopener";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
         break;
+      }
 
       case "theme":
         toggleTheme();

@@ -31,7 +31,7 @@ export function Hero() {
             <p className="hero-summary">{SITE.tagline}</p>
 
             <div className="hero-actions">
-              <a className="btn btn-gradient" href="/assets/resume.pdf" download>
+              <a className="btn btn-gradient" href={SITE.resumePath} download={SITE.resumeFilename}>
                 <i className="fa-solid fa-download" aria-hidden="true"></i>
                 Download Resume
               </a>
@@ -79,12 +79,12 @@ export function Hero() {
               </div>
               <div className="profile-stats-mini">
                 <div>
-                  <span className="profile-stat-num">3.5+</span>
+                  <span className="profile-stat-num">5+</span>
                   <span className="profile-stat-label">Years</span>
                 </div>
                 <div>
-                  <span className="profile-stat-num">100K+</span>
-                  <span className="profile-stat-label">DAU</span>
+                  <span className="profile-stat-num">600K+</span>
+                  <span className="profile-stat-label">MAU</span>
                 </div>
               </div>
               <div className="profile-badge">

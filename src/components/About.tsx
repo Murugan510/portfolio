@@ -1,4 +1,10 @@
-import { ABOUT_HIGHLIGHTS, CAREER_MILESTONES, ENGINEERING_PRINCIPLES } from "../data/portfolio";
+import {
+  ABOUT_HIGHLIGHTS,
+  CAREER_MILESTONES,
+  EDUCATION,
+  ENGINEERING_PRINCIPLES,
+  SUMMARY,
+} from "../data/portfolio";
 import { Reveal } from "./Reveal";
 import { AboutSyntax } from "./code/HeroSyntax";
 
@@ -10,31 +16,16 @@ export function About() {
         <Reveal>
           <header className="section-header">
             <p className="section-eyebrow">About Me</p>
-            <h2 id="about-heading">Building products that scale</h2>
+            <h2 id="about-heading">Summary</h2>
           </header>
         </Reveal>
 
         <div className="about-grid">
           <Reveal>
-            <p className="about-text">
-              Senior Frontend Engineer with <strong>3.5+ years</strong> of experience shipping
-              production software at product-based companies. I specialize in{" "}
-              <strong>React Native</strong>, <strong>React.js</strong>, <strong>Next.js</strong>,
-              and <strong>TypeScript</strong> — building interfaces that are fast, maintainable,
-              and built to scale.
-            </p>
+            <p className="about-text">{SUMMARY}</p>
           </Reveal>
 
           <Reveal delay={1}>
-            <p className="about-text">
-              My work spans <strong>performance optimization</strong>,{" "}
-              <strong>reusable architecture</strong>, <strong>video streaming</strong>,{" "}
-              <strong>analytics integration</strong>, and <strong>SEO</strong> for platforms
-              serving <strong>100K+ daily active users</strong>.
-            </p>
-          </Reveal>
-
-          <Reveal delay={2}>
             <ul className="about-highlights">
               {ABOUT_HIGHLIGHTS.map((item) => (
                 <li key={item}>
@@ -44,7 +35,7 @@ export function About() {
             </ul>
           </Reveal>
 
-          <Reveal delay={3}>
+          <Reveal delay={2}>
             <div className="about-principles">
               {ENGINEERING_PRINCIPLES.map((p) => (
                 <article key={p.title} className="principle-card glass">
@@ -56,6 +47,18 @@ export function About() {
                 </article>
               ))}
             </div>
+          </Reveal>
+
+          <Reveal delay={3}>
+            <article className="principle-card glass" aria-label="Education">
+              <h4>
+                <i className="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                Education
+              </h4>
+              <p>
+                {EDUCATION.degree} — {EDUCATION.school}
+              </p>
+            </article>
           </Reveal>
 
           <Reveal>

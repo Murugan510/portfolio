@@ -1,19 +1,24 @@
 export const SITE = {
   name: "Murugan Ramakrishnan",
   title: "Senior Frontend Engineer",
-  location: "Bangalore, India",
-  experience: "3.5+ Years",
+  location: "Bengaluru, India",
+  experience: "5+ Years",
   email: "murugan.ramakrishnan.tech@gmail.com",
-  phone: "+91 80731 14075",
+  phone: "+91 8073114075",
   linkedin: "https://www.linkedin.com/in/murugan-ramakrishnan-897472218/",
   linkedinHandle: "murugan-ramakrishnan",
-  github: "https://github.com/muruganramakrishnan",
-  githubHandle: "muruganramakrishnan",
+  github: "https://github.com/Murugan510",
+  githubHandle: "Murugan510",
   url: "https://muruganramakrishnan.dev/",
+  resumePath: "/assets/MG_Frontend_Engineer.pdf",
+  resumeFilename: "MG_Frontend_Engineer.pdf",
   tagline:
-    "I build high-performance React Native and Next.js applications used by 100,000+ daily users.",
-  typingPhrases: ["React Native", "React.js", "Next.js", "TypeScript"],
+    "Frontend engineer with 5+ years of professional experience, including 4+ years building production consumer and internal applications across React.js, Next.js and React Native in a shared TypeScript monorepo.",
+  typingPhrases: ["React.js", "Next.js", "React Native", "TypeScript"],
 } as const;
+
+export const SUMMARY =
+  "Frontend engineer with 5+ years of professional experience, including 4+ years building production consumer and internal applications across React.js, Next.js and React Native in a shared TypeScript monorepo. Experienced in frontend architecture, performance engineering, offline-first mobile experiences, SSR/SEO, payments, media, internationalization and analytics-driven product development. Built and shipped features for Ninja Kisan, an agri-tech platform with 1M+ downloads and 600K MAU, including experiences delivered across 11 Indian languages.";
 
 export const NAV_LINKS = [
   { href: "#hero", label: "Home" },
@@ -26,88 +31,100 @@ export const NAV_LINKS = [
 ] as const;
 
 export const STATS = [
-  { icon: "fa-briefcase", target: 3.5, suffix: "+", decimals: 1, label: "Years Experience" },
-  { icon: "fa-users", target: 100, suffix: "K+", decimals: 0, label: "Daily Active Users" },
-  { icon: "fa-rocket", target: 20, suffix: "+", decimals: 0, label: "Production Features" },
-  { icon: "fa-shield-halved", target: 99.9, suffix: "%", decimals: 1, label: "App Stability" },
+  { icon: "fa-briefcase", target: 5, suffix: "+", decimals: 0, label: "Years Experience" },
+  { icon: "fa-users", target: 600, suffix: "K+", decimals: 0, label: "Monthly Active Users" },
+  { icon: "fa-download", target: 1, suffix: "M+", decimals: 0, label: "App Downloads" },
+  { icon: "fa-language", target: 11, suffix: "", decimals: 0, label: "Languages Shipped" },
 ] as const;
 
 export const ABOUT_HIGHLIGHTS = [
-  "Production apps at 100K+ DAU scale",
-  "React Native & Next.js expertise",
-  "Performance-first engineering mindset",
-  "Open to product company roles",
+  "React.js, Next.js & React Native in a shared TypeScript monorepo",
+  "Frontend architecture, performance engineering & offline-first mobile",
+  "SSR/SEO, payments, media, i18n & analytics-driven product development",
+  "Ninja Kisan — 1M+ downloads, 600K MAU, 11 Indian languages",
 ] as const;
 
 export const ENGINEERING_PRINCIPLES = [
   {
-    icon: "fa-gauge-high",
-    title: "Performance first",
-    description: "Profile, measure, and optimize before shipping — especially on mobile and low-connectivity surfaces.",
+    icon: "fa-sitemap",
+    title: "Frontend architecture",
+    description: "Shared TypeScript monorepo patterns across React.js, Next.js and React Native.",
   },
   {
-    icon: "fa-cubes",
-    title: "Reusable systems",
-    description: "Build component APIs and patterns that scale across teams, not one-off screens.",
+    icon: "fa-gauge-high",
+    title: "Performance engineering",
+    description: "FlashList, caching, and low-end device optimization for real production traffic.",
+  },
+  {
+    icon: "fa-wifi",
+    title: "Offline-first mobile",
+    description: "MMKV-persisted Zustand stores for intermittent connectivity on rural networks.",
   },
   {
     icon: "fa-chart-line",
-    title: "Data-informed shipping",
-    description: "Instrument with analytics, validate with metrics, iterate with evidence.",
-  },
-  {
-    icon: "fa-mobile-screen",
-    title: "Real-world UX",
-    description: "Design for offline, mid-range devices, and users who depend on the product daily.",
+    title: "Analytics-driven shipping",
+    description: "Instrumented product analytics and SEO so features ship with measurable impact.",
   },
 ] as const;
 
 export const CAREER_MILESTONES = [
-  { year: "2022", label: "Joined Ninjacart — Frontend engineering at scale" },
-  { year: "Ops", label: "Operations leadership at Masalabox & Swiggy" },
-  { year: "Now", label: "Shipping React Native products for 100K+ DAU" },
+  { year: "2021", label: "Masalabox Food Network — Frontend Developer (Angular, Ionic)" },
+  { year: "2022", label: "Joined Ninjacart — React.js, Next.js & React Native" },
+  { year: "2026", label: "SDE 1 — Ninja Kisan at 1M+ downloads & 600K MAU" },
 ] as const;
+
+export const EDUCATION = {
+  degree: "B.Sc. Computer Science",
+  school: "Bangalore University",
+} as const;
 
 export const EXPERIENCE = [
   {
-    role: "Senior Frontend Developer",
-    company: "Ninjacart",
+    role: "SDE 1",
+    company: "Ninjacart (63Ideas Infolabs Pvt. Ltd.)",
     logo: "/assets/logos/ninjacart.svg",
-    date: "2022 — Present",
-    badges: ["React Native", "100K+ DAU", "Payments"],
-    metrics: ["100K+ daily users", "3+ teams on shared UI"],
+    date: "May 2022 – Jun 2026",
+    badges: ["React.js", "Next.js", "React Native"],
+    metrics: ["1M+ downloads", "600K MAU", "10M+ daily video views"],
     highlights: [
-      "Built production React Native applications serving **100K+ daily active users**",
-      "Developed a reusable component library adopted across **3+ product teams**",
-      "Integrated Razorpay payments, reducing checkout friction for thousands of daily transactions",
-      "Implemented PostHog analytics enabling data-driven feature decisions across the org",
-      "Built a video streaming platform with optimized playback and reduced buffering incidents",
-      "Improved app performance through profiling, memoization, and list virtualization",
-      "Delivered Next.js SEO improvements increasing organic discoverability for web surfaces",
+      "Ninja Kisan — agri-tech consumer platform: pnpm/Turborepo monorepo (React Native + Next.js, 20+ shared packages, ~89% shared code); **1M+ downloads**, **600K MAU**, **10M+ daily video views**.",
+      "Owned frontend features end to end — from requirement analysis and technical design through implementation, API integration, testing, deployment and production debugging — across consumer and internal platforms.",
+      "Built and maintained reusable React.js component architecture — functional components, custom hooks, Context API and shared UI primitives — across multiple product surfaces.",
+      "Architected server-rendered category, news and QnA content routes on Next.js 14 App Router (**100+ routes**) using React Server Components, with parallel/intercepted routes for modal URLs.",
+      "Implemented schema.org JSON-LD structured data and canonical/hreflang metadata across **11 locales**, enabling multilingual SEO indexing for content and QnA pages.",
+      "Engineered a Next.js Route Handler (BFF) that server-side scrapes third-party article metadata, removing client-side CORS constraints from the news feed.",
+      "Delivered one shared React component layer across web and native via Solito for unified cross-platform routing, and tuned per-route fetch caching (no-store/force-cache + tag revalidation).",
+      "Shipped voice search for low-literacy users — locale-aware speech-to-text across **11 Indian languages** with microphone permission gating, on both React Native and web.",
+      "Designed the mobile navigation shell — 7-tab bottom navigation over Expo Router file-based routing (~80 routes) with platform-specific tab bar rendering.",
+      "Developed a cross-platform audio player for vernacular news with separate native/web playback engines behind one interface, including position polling, lifecycle cleanup and listen-through analytics.",
+      "Drove viewability-based impression tracking and video autoplay (>50% visibility threshold) across feed, shorts and carousel surfaces, powering ad impression measurement.",
+      "Built resumable large-file video upload — PeerTube resumable-session protocol (chunked reads via RNFS, HTTP 308 continuation) in an Android foreground service, with progress persisted in MMKV.",
+      "Migrated high-volume feed/list surfaces to Shopify FlashList; integrated Truecaller one-tap authentication into the login flow with backend-config-driven gating.",
+      "Led the cart-to-payment checkout flow end to end — Razorpay integration, order creation, payment status handling and transaction reconciliation.",
+      "Co-built a LiveKit-powered real-time chat feature for interactive product experiences alongside the tech lead.",
+      "Implemented Firebase deep linking for cross-surface navigation and Crashlytics for production crash monitoring and stability triage.",
+      "Primary contributor to the server-driven UI / adaptive card system that lets backend-controlled layouts and campaigns ship without app releases.",
+      "Delivered a farmer-facing product in **11 Indian languages** with a platform-split i18n strategy — offline-capable bundled dictionaries on mobile, lazy-loaded namespaces on web.",
+      "Launched the in-app advertising surface — banner, image and video ad cards across feed, QnA, profile and product pages — with click/impression instrumentation.",
+      "Owned the crop-preference personalization flow end to end across 8 merged iterations, driving personalized feed and advisory content.",
+      "Engineered an offline-first state layer — MMKV-persisted Zustand stores within a 24-store shared layer — for intermittent connectivity on low-end Android devices.",
+      "Instrumented ~79 product analytics events into a centralized 562-event taxonomy, and established a 185-identifier testID convention across 102 components for Testsigma E2E in CI.",
+      "Mentored **3+ engineers**, contributed to code reviews and technical discussions, and coordinated sprint planning and task allocation for a **10+ engineer** Agile team.",
+      "Omni Channel — developed a React.js internal operations platform covering inventory, vehicle and driver management, and import/export tracking.",
+      "Delivered sales order and purchase order workflows with integrated payment flows; built truck management with MapmyIndia API routing using React Query, Zustand and Context.",
     ],
   },
   {
-    role: "Operations Manager",
-    company: "Masalabox",
+    role: "Frontend Developer (Angular, Ionic)",
+    company: "Masalabox Food Network",
     logo: "/assets/logos/masalabox.svg",
-    date: "Previous",
-    badges: ["Logistics", "Last-mile"],
-    metrics: ["200+ delivery partners"],
+    date: "Apr 2021 – Apr 2022",
+    badges: ["Angular", "Ionic", "TypeScript"],
+    metrics: ["Web + delivery apps"],
     highlights: [
-      "Scaled delivery operations across multiple zones with measurable SLA improvements",
-      "Led and managed **200+ delivery partners** across high-volume routes",
-    ],
-  },
-  {
-    role: "Assistant Manager",
-    company: "Swiggy",
-    logo: "/assets/logos/swiggy.svg",
-    date: "Previous",
-    badges: ["Promoted internally", "High-growth ops"],
-    metrics: ["Fast-paced delivery ops"],
-    highlights: [
-      "Started as Delivery Executive — **promoted internally** for operational excellence",
-      "Managed high-growth delivery operations in a fast-paced product environment",
+      "Developed the customer-facing Angular food ordering and subscription platform — chef discovery, menus, ordering, subscription selection and delivery-date management.",
+      "Designed role-based chef dashboards for order management, payment tracking, order history and menu management.",
+      "Built an Ionic delivery app for delivery teams to view assigned orders and update order status, with reusable responsive components (Angular, TypeScript, SCSS) integrating REST APIs across web and mobile.",
     ],
   },
 ] as const;
@@ -128,65 +145,74 @@ export const SKILL_CATEGORIES: {
   skills: SkillBadge[];
 }[] = [
   {
-    title: "Languages",
+    title: "Core",
     icon: "fa-code",
     skills: [
-      { icon: "fa-brands fa-js", label: "JavaScript", years: "4+ yrs", proficiency: "Advanced" },
-      { logo: "/assets/logos/tech/typescript.svg", label: "TypeScript", years: "3+ yrs", proficiency: "Advanced" },
+      { logo: "/assets/logos/tech/react.svg", label: "React.js" },
+      { logo: "/assets/logos/tech/nextjs.svg", label: "Next.js 14", logoClass: "skill-badge-logo--nextjs" },
+      { logo: "/assets/logos/tech/react.svg", label: "React Native" },
+      { logo: "/assets/logos/tech/expo.svg", label: "Expo Router", logoClass: "skill-badge-logo--expo" },
+      { logo: "/assets/logos/tech/typescript.svg", label: "TypeScript" },
+      { icon: "fa-brands fa-js", label: "JavaScript ES6+" },
+      { icon: "fa-solid fa-route", label: "Solito" },
     ],
   },
   {
-    title: "Frontend",
-    icon: "fa-window-maximize",
-    skills: [
-      { logo: "/assets/logos/tech/react.svg", label: "React", years: "4+ yrs", proficiency: "Expert" },
-      { logo: "/assets/logos/tech/react.svg", label: "React Native", years: "3+ yrs", proficiency: "Expert" },
-      { logo: "/assets/logos/tech/nextjs.svg", label: "Next.js", logoClass: "skill-badge-logo--nextjs", years: "2+ yrs", proficiency: "Advanced" },
-      { logo: "/assets/logos/tech/expo.svg", label: "Expo", logoClass: "skill-badge-logo--expo", years: "3+ yrs", proficiency: "Advanced" },
-    ],
-  },
-  {
-    title: "State Management",
+    title: "State & Data",
     icon: "fa-database",
     skills: [
-      { icon: "fa-solid fa-layer-group", label: "Zustand", years: "2+ yrs", proficiency: "Advanced" },
-      { icon: "fa-solid fa-arrows-rotate", label: "React Query", years: "2+ yrs", proficiency: "Advanced" },
-      { icon: "fa-solid fa-database", label: "MMKV", years: "2+ yrs", proficiency: "Proficient" },
+      { icon: "fa-solid fa-layer-group", label: "Zustand" },
+      { icon: "fa-solid fa-database", label: "MMKV" },
+      { icon: "fa-solid fa-arrows-rotate", label: "React Query" },
+      { icon: "fa-solid fa-plug", label: "REST / Axios" },
+      { icon: "fa-solid fa-file-code", label: "JSON Forms + AJV" },
     ],
   },
   {
-    title: "UI",
+    title: "UI & Performance",
     icon: "fa-palette",
     skills: [
-      { icon: "fa-solid fa-wind", label: "Tailwind", years: "3+ yrs", proficiency: "Advanced" },
-      { icon: "fa-solid fa-paintbrush", label: "Tamagui", years: "1+ yrs", proficiency: "Proficient" },
-      { icon: "fa-solid fa-cubes", label: "Material UI", years: "2+ yrs", proficiency: "Proficient" },
+      { icon: "fa-solid fa-paintbrush", label: "Tamagui" },
+      { icon: "fa-solid fa-list", label: "FlashList" },
+      { icon: "fa-solid fa-chart-simple", label: "ECharts" },
+      { icon: "fa-solid fa-film", label: "SVG / Lottie" },
+      { icon: "fa-solid fa-share-nodes", label: "react-native-share" },
     ],
   },
   {
-    title: "Backend",
-    icon: "fa-server",
-    skills: [
-      { icon: "fa-brands fa-node-js", label: "Node.js", years: "2+ yrs", proficiency: "Proficient" },
-      { icon: "fa-solid fa-server", label: "Express", years: "2+ yrs", proficiency: "Proficient" },
-    ],
-  },
-  {
-    title: "Database",
-    icon: "fa-cloud",
-    skills: [{ logo: "/assets/logos/tech/firebase.svg", label: "Firebase", years: "2+ yrs", proficiency: "Proficient" }],
-  },
-  {
-    title: "Tools",
+    title: "Platform & Tooling",
     icon: "fa-wrench",
+    skills: [
+      { icon: "fa-solid fa-box", label: "pnpm + Turborepo" },
+      { icon: "fa-solid fa-leaf", label: "Biome" },
+      { icon: "fa-solid fa-language", label: "i18next" },
+      { logo: "/assets/logos/tech/firebase.svg", label: "Firebase" },
+      { logo: "/assets/logos/tech/posthog.svg", label: "PostHog" },
+      { icon: "fa-solid fa-robot", label: "Testsigma E2E" },
+    ],
+  },
+  {
+    title: "CI/CD & Testing",
+    icon: "fa-vial",
+    skills: [
+      { icon: "fa-solid fa-code-branch", label: "Bitbucket Pipelines" },
+      { icon: "fa-solid fa-vial", label: "Cypress" },
+      { icon: "fa-solid fa-robot", label: "Testsigma E2E" },
+      { icon: "fa-solid fa-gears", label: "CI test instrumentation" },
+    ],
+  },
+  {
+    title: "Payments, Real-Time & AI",
+    icon: "fa-bolt",
     wide: true,
     skills: [
-      { icon: "fa-brands fa-git-alt", label: "Git", years: "4+ yrs", proficiency: "Advanced" },
-      { icon: "fa-solid fa-diagram-project", label: "TurboRepo", years: "1+ yrs", proficiency: "Proficient" },
-      { icon: "fa-solid fa-box", label: "PNPM", years: "2+ yrs", proficiency: "Proficient" },
-      { logo: "/assets/logos/tech/posthog.svg", label: "PostHog", years: "2+ yrs", proficiency: "Advanced" },
-      { logo: "/assets/logos/tech/datadog.svg", label: "Datadog", years: "1+ yrs", proficiency: "Proficient" },
-      { icon: "fa-brands fa-figma", label: "Figma", years: "3+ yrs", proficiency: "Proficient" },
+      { icon: "fa-solid fa-credit-card", label: "Razorpay" },
+      { icon: "fa-solid fa-comments", label: "LiveKit" },
+      { icon: "fa-solid fa-wifi", label: "Offline-first architecture" },
+      { icon: "fa-solid fa-robot", label: "Cursor" },
+      { icon: "fa-solid fa-robot", label: "Claude Code" },
+      { icon: "fa-brands fa-github", label: "GitHub Copilot" },
+      { icon: "fa-solid fa-comments", label: "ChatGPT" },
     ],
   },
 ];
@@ -195,87 +221,80 @@ export const PROJECTS = [
   {
     name: "Ninja Kisan",
     image: "/assets/images/project-ninja-kisan.svg",
-    alt: "Ninja Kisan — React Native agricultural commerce app UI mockup",
+    alt: "Ninja Kisan — agri-tech consumer platform",
     problem:
-      "Farmers needed a reliable mobile platform for commerce, video content, and payments — with poor connectivity in rural areas.",
+      "Farmers needed a reliable vernacular agri-tech platform for commerce, content, media and payments across web and mobile.",
     solution:
-      "Built a production React Native app with offline support, Razorpay integration, PostHog analytics, and a performant video feed.",
+      "Shipped features across a pnpm/Turborepo React Native + Next.js monorepo (20+ shared packages, ~89% shared code) with offline-first state, Razorpay checkout, 11-locale i18n, voice search, FlashList feeds and analytics.",
     impact:
-      "Serves **100K+ daily users** with stable payments, analytics-driven iterations, and seamless offline-to-online sync.",
+      "**1M+ downloads**, **600K MAU**, and **10M+ daily video views** — including experiences delivered across **11 Indian languages**.",
     architecture:
-      "React Native + Expo monorepo patterns, offline queue layer, shared component library, PostHog event pipeline.",
+      "pnpm/Turborepo monorepo, Expo Router, Solito cross-platform routing, Next.js 14 App Router, Zustand + MMKV, PostHog/Firebase, Razorpay, LiveKit.",
     challenges:
-      "Unreliable rural connectivity, payment edge cases, and video performance on mid-range Android devices.",
-    metrics: ["100K+ DAU", "Stable Razorpay flows", "Offline-to-online sync"],
+      "Low-end Android devices, intermittent rural connectivity, resumable video upload, and shipping one product across 11 Indian languages.",
+    metrics: ["1M+ downloads", "600K MAU", "11 locales"],
     lessons:
-      "Offline-first isn't optional for rural users — design sync and payment states explicitly from day one.",
+      "Offline-first state, vernacular UX and measured analytics are core product requirements for agri-tech at scale.",
     tech: [
       { icon: "fa-brands fa-react", label: "React Native" },
-      { icon: "fa-solid fa-bolt", label: "Expo" },
+      { icon: "fa-solid fa-n", label: "Next.js" },
       { icon: "fa-solid fa-code", label: "TypeScript" },
     ],
-    github: "#",
-    demo: "#",
   },
   {
-    name: "Snippets",
+    name: "Ninja Kisan Web",
     image: "/assets/images/project-snippets.svg",
-    alt: "Snippets — Next.js video platform UI mockup",
+    alt: "Ninja Kisan web — Next.js SSR and SEO content platform",
     problem:
-      "Video content needed strong SEO, fast initial loads, and excellent Core Web Vitals to compete for organic traffic.",
+      "Category, news and QnA content needed multilingual SEO, SSR and crawlability across 11 locales.",
     solution:
-      "Engineered a Next.js platform with SSR, metadata optimization, and performance budgets for video-heavy pages.",
+      "Architected Next.js 14 App Router routes (100+ routes) with React Server Components, JSON-LD/hreflang metadata, parallel/intercepted modal routes, and a BFF Route Handler for article metadata.",
     impact:
-      "Improved discoverability and page performance with measurable gains in LCP and SEO-indexed content surfaces.",
+      "Enabled multilingual SEO indexing for content and QnA pages while balancing freshness against origin load with tag revalidation.",
     architecture:
-      "Next.js App Router, SSR for content pages, metadata API, image optimization, performance budgets per route.",
+      "Next.js App Router, RSC, schema.org JSON-LD, canonical/hreflang, Solito shared component layer, Cypress E2E.",
     challenges:
-      "Video-heavy pages hurting LCP, SEO metadata at scale, and balancing SSR with interactive video UI.",
-    metrics: ["Improved LCP", "SEO-indexed surfaces", "Faster initial loads"],
+      "100+ content routes, locale-aware SEO at scale, and CORS-free news metadata ingestion via a server-side BFF.",
+    metrics: ["100+ routes", "11-locale SEO", "SSR + RSC"],
     lessons:
-      "Set performance budgets early — video pages need a deliberate SSR and asset loading strategy.",
+      "Structured data, hreflang and per-route cache policy are product features for discoverability.",
     tech: [
       { icon: "fa-solid fa-n", label: "Next.js" },
       { icon: "fa-solid fa-code", label: "TypeScript" },
       { icon: "fa-solid fa-gauge-high", label: "SSR" },
     ],
-    github: "#",
-    demo: "#",
   },
   {
-    name: "Reels Player",
+    name: "Omni Channel",
     image: "/assets/images/project-reels.svg",
-    alt: "Reels Player — React Native video streaming component mockup",
+    alt: "Omni Channel — React.js internal operations platform",
     problem:
-      "Short-form video feeds suffered from janky scrolling, memory spikes, and unreliable autoplay on mid-range devices.",
+      "Operations teams needed a single internal platform for inventory, vehicles, drivers, orders and import/export tracking.",
     solution:
-      "Built a FlashList-powered reels component with optimized video preloading, autoplay logic, and aggressive memory management.",
+      "Developed a React.js internal operations platform with sales/purchase order workflows, integrated payments, and truck management with MapmyIndia route and payment estimation.",
     impact:
-      "Delivered buttery-smooth vertical scrolling and reduced frame drops across production video surfaces.",
+      "Gave operations a unified React.js surface for inventory, fleet and order workflows with React Query and Zustand + Context state management.",
     architecture:
-      "FlashList virtualization, video preloading pool, memory-aware autoplay controller, reusable feed component.",
+      "React.js, React Query + custom hooks, Zustand + Context, MapmyIndia API, integrated payment flows.",
     challenges:
-      "Memory spikes on scroll, autoplay reliability, and frame drops on mid-range devices.",
-    metrics: ["Smoother scroll", "Reduced frame drops", "Production video surfaces"],
+      "Modeling operational workflows (inventory, fleet, SO/PO) and map-based route/payment estimation in one internal product.",
+    metrics: ["Inventory & fleet", "SO / PO workflows", "MapmyIndia routing"],
     lessons:
-      "Virtualized lists + aggressive memory management are non-negotiable for vertical video feeds.",
+      "Internal tools need the same API discipline and state clarity as consumer apps — especially around payments and routing.",
     tech: [
-      { icon: "fa-brands fa-react", label: "React Native" },
-      { icon: "fa-solid fa-list", label: "FlashList" },
-      { icon: "fa-solid fa-code", label: "TypeScript" },
+      { icon: "fa-brands fa-react", label: "React.js" },
+      { icon: "fa-solid fa-arrows-rotate", label: "React Query" },
+      { icon: "fa-solid fa-map", label: "MapmyIndia" },
     ],
-    github: "#",
-    demo: "#",
   },
 ] as const;
 
 export const ACHIEVEMENTS = [
-  { metric: "100K+", title: "Daily Active Users", description: "Shipped production apps reaching over 100,000 users every day.", icon: null },
-  { metric: null, title: "Performance Improvements", description: "Reduced render overhead via profiling, memoization, and list virtualization.", icon: "fa-gauge-high" },
-  { metric: null, title: "Reusable Component Library", description: "Built shared UI systems adopted across multiple product teams.", icon: "fa-cubes" },
-  { metric: null, title: "Video Streaming Platform", description: "Delivered optimized video playback for high-traffic mobile surfaces.", icon: "fa-play" },
-  { metric: null, title: "Analytics Integration", description: "Implemented PostHog for product analytics and data-informed shipping.", icon: "fa-chart-simple" },
-  { metric: null, title: "SEO Optimization", description: "Improved Next.js SEO and discoverability for content-heavy web apps.", icon: "fa-magnifying-glass" },
+  { metric: "1M+", title: "App Downloads", description: "Shipped features for Ninja Kisan, an agri-tech platform with 1M+ downloads.", icon: null },
+  { metric: "600K+", title: "Monthly Active Users", description: "Built and shipped production experiences for 600K MAU on Ninja Kisan.", icon: null },
+  { metric: "11", title: "Indian Languages", description: "Delivered farmer-facing product experiences across 11 Indian languages.", icon: null },
+  { metric: null, title: "Offline-First Architecture", description: "Engineered MMKV-persisted Zustand stores for intermittent connectivity on low-end Android devices.", icon: "fa-wifi" },
+  { metric: null, title: "Mentorship", description: "Mentored 3+ engineers and coordinated sprint planning for a 10+ engineer Agile team.", icon: "fa-users" },
 ] as const;
 
 export const AVAILABILITY = [

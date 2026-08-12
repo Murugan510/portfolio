@@ -22,31 +22,31 @@ const RULES: CopilotRule[] = [
   {
     keywords: ["stack", "skill", "technology", "tech", "react", "typescript", "tools"],
     response:
-      "Primary stack: React Native, React.js, Next.js, TypeScript. Also experienced with Zustand, React Query, Expo, Node.js, Firebase, PostHog, Datadog, and building reusable component libraries.",
+      "Primary stack from his CV: React.js, Next.js 14, React Native, Expo Router, TypeScript, Solito. Also Zustand, MMKV, React Query, Tamagui, FlashList, pnpm/Turborepo, Firebase, PostHog, Razorpay, LiveKit, Cypress, and Testsigma.",
   },
   {
-    keywords: ["experience", "work", "job", "ninjacart", "swiggy", "career"],
+    keywords: ["experience", "work", "job", "ninjacart", "masalabox", "career"],
     response:
-      "Currently Senior Frontend Developer at Ninjacart (2022–Present), building React Native apps for 100K+ daily users. Previously Operations roles at Masalabox (200+ partners) and Swiggy (promoted internally).",
+      "SDE 1 at Ninjacart / 63Ideas Infolabs Pvt. Ltd. (May 2022 – Jun 2026) on Ninja Kisan and Omni Channel. Previously Frontend Developer (Angular, Ionic) at Masalabox Food Network (Apr 2021 – Apr 2022).",
   },
   {
-    keywords: ["project", "built", "portfolio", "ninja kisan", "snippets", "reels"],
+    keywords: ["project", "built", "portfolio", "ninja kisan", "omni", "reels"],
     response:
-      "Featured projects: Ninja Kisan (React Native + Razorpay + offline), Snippets (Next.js SSR/SEO video platform), Reels Player (FlashList video streaming). All focused on performance and production scale.",
+      "From his CV: Ninja Kisan (React Native + Next.js monorepo, 1M+ downloads, 600K MAU), Ninja Kisan Web (Next.js SSR/SEO across 11 locales), and Omni Channel (React.js internal operations platform).",
   },
   {
     keywords: ["open", "hire", "available", "joining", "remote", "relocate"],
     response:
-      "Yes — open to Frontend, React Native, and Next.js roles. Available for Remote, Hybrid, and Onsite. Immediate joining possible. Based in Bangalore, India.",
+      "Yes — open to Frontend, React Native, and Next.js roles. Available for Remote, Hybrid, and Onsite. Immediate joining possible. Based in Bengaluru, India.",
   },
   {
     keywords: ["contact", "email", "phone", "linkedin", "reach", "connect"],
     response: `Email: ${SITE.email}\nPhone: ${SITE.phone}\nLinkedIn: ${SITE.linkedin}\nGitHub: ${SITE.github}`,
   },
   {
-    keywords: ["performance", "optimize", "scale", "users", "dau"],
+    keywords: ["performance", "optimize", "scale", "users", "dau", "mau"],
     response:
-      "Murugan has shipped production apps serving 100K+ daily active users. Focus areas: list virtualization, memoization, Core Web Vitals, offline-first mobile, and reusable architecture adopted across teams.",
+      "Murugan has shipped production features on apps with 1M+ downloads and 600K MAU. Focus areas: FlashList virtualization, offline-first mobile, SSR/SEO, payments, and reusable monorepo architecture across web and native.",
   },
 ];
 

@@ -27,7 +27,7 @@ export function Secret() {
             </article>
             <article className="secret-card glass">
               <h3><i className="fa-solid fa-heart" aria-hidden="true"></i> Why Frontend?</h3>
-              <p>Because the best products feel invisible — fast, intuitive, and delightful at 100K+ scale.</p>
+              <p>Because the best products feel invisible — fast, intuitive, and delightful at 600K+ MAU scale.</p>
             </article>
             <article className="secret-card glass secret-card--cta">
               <h3><i className="fa-solid fa-handshake" aria-hidden="true"></i> You passed the test</h3>
